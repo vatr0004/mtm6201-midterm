@@ -156,31 +156,6 @@ nav ul li:hover::after{
 
     }
 }
-
-/* Tablet Version*/
-
-@media (max-width: 900px) {
-
-    nav{
-        display: flex;
-        text-decoration: none;
-        padding-top: 10px;
-        padding-bottom: 80px;
-        justify-content: space-between;
-        padding-left: 460px;
-    }
-
-    nav ul li{
-        list-style: none;
-        display: inline-block;
-        color: rgb(206, 195, 195);
-        font-size: 20px;
-        font-weight: bold;
-        padding: 5px;
-        position: relative;
-    }
-
-}
 /* End of Header*/ 
 
 /*Styling the Form*/
