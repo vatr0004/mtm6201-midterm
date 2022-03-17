@@ -188,6 +188,16 @@ nav ul li:hover::after{
     }
 }
 
+/*study options*/
+
+.option-column{
+   flex-basis:32;
+   border-radius:10px;
+   margin-bottom:30px;
+   position:relative;
+   overflow:hidden;
+}
+
 /* Contact Us Button and Banner*/
 
 .contact{
