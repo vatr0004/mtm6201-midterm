@@ -1,0 +1,361 @@
+/* http://meyerweb.com/eric/tools/css/reset/
+        v2.0 | 20110126
+        License: none (public domain)
+        */
+ 
+        html, body, div, span, applet, object, iframe,
+        h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+        a, abbr, acronym, address, big, cite, code,
+        del, dfn, em, img, ins, kbd, q, s, samp,
+        small, strike, strong, sub, sup, tt, var,
+        b, u, i, center,
+        dl, dt, dd, ol, ul, li,
+        fieldset, form, label, legend,
+        table, caption, tbody, tfoot, thead, tr, th, td,
+        article, aside, canvas, details, embed,
+        figure, figcaption, footer, header, hgroup,
+        menu, nav, output, ruby, section, summary,
+        time, mark, audio, video {
+            margin: 0;
+            padding: 0;
+            border: 0;
+            font-size: 100%;
+            font: inherit;
+            vertical-align: baseline;
+        }
+        /* HTML5 display-role reset for older browsers */
+        article, aside, details, figcaption, figure,
+        footer, header, hgroup, menu, nav, section {
+            display: block;
+        }
+        body {
+            line-height: 1;
+        }
+        ol, ul {
+            list-style: none;
+        }
+        blockquote, q {
+            quotes: none;
+        }
+        blockquote:before, blockquote:after,
+        q:before, q:after {
+            content: '';
+            content: none;
+        }
+        table {
+            border-collapse: collapse;
+            border-spacing: 0;
+        }
+/*=======================================================================================*/
+/*============================== MY STYLES =============================================*/
+/*=====================================================================================*/
+
+/* Building the header*/
+
+*{
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    background: #A8BCA8;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+.theheader{
+    min-height: 100vh;
+    width:100%;
+    background-image:linear-gradient(rgba(0, 0, 0, 0.5),rgba(0, 0, 0, 0.5)),url(../images/header.jpg);
+    background-position: center;
+    background-repeat:no-repeat;
+    background-size: 100% 100%;
+    position: relative;
+}
+
+.intro{
+    text-align: center;
+    padding-right: 80px;
+    padding-left: 80px;
+    font-size: 100px;
+    font-weight: bold;
+    color: rgb(206, 195, 195);
+
+} /* Starting comment after header*/
+
+.inspiration{
+    text-align: center;
+    padding-top: 300px;
+    padding-bottom: 300px;
+    font-size: 80px;
+    font-weight: bold;
+    color: #ECE7E7;
+    position: relative;
+}
+
+/*Making the options at the top*/
+
+nav{
+    display: flex;
+    padding-bottom: 190px;
+    justify-content: space-between;
+    flex: 1;
+    padding-left: 1000px;
+}
+
+a{
+    text-decoration: none;
+    color: rgb(206, 195, 195);
+}
+
+nav ul li{
+    list-style: none;
+    display: inline-block;
+    font-size: 20px;
+    font-weight: bold;
+    padding: 12px;
+    position: relative;
+}
+
+nav ul li::after{
+    content:'';
+    height: 2px;
+    width: 0%;
+    background: #6D7D6D;
+    display: block;
+    margin: auto;
+    transition: 0.3s;
+}
+
+nav ul li:hover::after{
+    width: 100%;
+}
+
+/* Mobile Version*/
+@media(max-width:700px){
+
+    .intro{
+        font-size: 70px;
+        padding-left: 40px;
+        padding-bottom: 30px;
+    }
+
+    .inspiration{
+        font-size: 60px;
+        padding-top: 50%;
+    }
+    
+    nav{
+        display: flex;
+        text-decoration: none;
+        padding-top: 10px;
+        padding-bottom: 80px;
+        justify-content: space-between;
+        padding-left: 200px;
+    }
+
+    nav ul li{
+        list-style: none;
+        display: inline-block;
+        color: rgb(206, 195, 195);
+        font-size: 15px;
+        font-weight: bold;
+        padding: 5px;
+        position: relative;
+    }
+
+    .theheader{
+        min-height: 50vh;
+        width:100%;
+        background-size: 100% 100%;
+        padding-bottom: 10%;
+
+    }
+}
+
+/*Tablet Version*/
+
+@media (max-width: 900px) {
+    .intro{
+        padding-bottom: 60px;
+    }
+
+
+    nav{
+        display: flex;
+        text-decoration: none;
+        padding-top: 10px;
+        padding-bottom: 80px;
+        justify-content: space-between;
+        padding-left: 460px;
+    }
+
+    nav ul li{
+        list-style: none;
+        display: inline-block;
+        color: rgb(206, 195, 195);
+        font-size: 20px;
+        font-weight: bold;
+        padding: 5px;
+        position: relative;
+    }
+   
+}
+
+/*Making the study options*/
+.start{
+    text-align: center;
+    padding-top: 100px;
+    padding-bottom: 50px;
+    font-size: 80px;
+    font-weight: bold;
+    color: #ECE7E7;
+    position: relative;
+
+}
+
+.starting{
+    background: #6d7d6d;
+    padding-bottom: 50px;
+}
+
+.options{
+    width: 90%;
+    margin: auto;
+    padding-top: 50px;
+    display: flex;
+}
+
+.option-column{
+    flex-basis: 30%;
+    margin-bottom: 30px;
+    position: relative;
+    overflow: hidden;
+    padding: 12px;
+    padding-left: 20px;
+}
+
+.option-column img{
+    width: 100%;
+}
+
+
+.study{
+    text-align: center;
+    padding-top: 220px;
+    padding-bottom: 100px;
+    font-size: 60px;
+    font-weight: bold;
+    color: rgb(206, 195, 195);
+    position: relative;
+}
+
+
+.layer{
+    background: none;
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+
+}
+
+.layer:hover{
+    background:rgb(109, 125, 109, 0.5);
+    transition: 0.3s;
+}
+
+/*Mobile Version*/
+@media(max-width:700px){
+
+    .start{
+        font-size: 60px;
+        padding-bottom: 10px;
+    }
+
+    .options{
+        width: 70%;
+        padding: 70px;
+        display: inline-block;
+    }
+}
+
+/* Contact Us Button and Banner*/
+
+.contact{
+    margin: 100px auto;
+    width: 80%;
+    background-image: linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.5)),url(../images/contactbutton.jpg);
+    background-size: cover;
+    background-position: center;
+    text-align: center;
+    padding-bottom: 100px;
+}
+
+.talk{
+    text-align: center;
+    padding-top: 100px;
+    padding-bottom: 50px;
+    font-size: 60px;
+    font-weight: bold;
+    color:  rgb(206, 195, 195);
+    position: relative;
+}
+
+.button1{
+    display: inline-block;
+    text-decoration: none;
+    color:  rgb(206, 195, 195);
+    border: 2px solid;
+    padding: 10px 30px;
+    font-size: 25px;
+    position: relative;
+    cursor: pointer;
+}
+
+.button1:hover{
+    border: 1px solid rgb(109, 125, 109, 0.5);
+    background: rgb(109, 125, 109, 0.5);
+    transition: 0.5s;
+}
+
+/*Making the footer*/
+
+.footer{
+    padding-top: 220px;
+    text-align: center;
+    padding-bottom: 20px;
+}
+
+/* Adding the social Medias*/
+
+.fa {
+    padding: 5px;
+    font-size: 50px;
+    width: 40px;
+    text-align: center;
+    text-decoration: none;
+    margin: 5px 2px;
+}
+
+.fa-facebook{
+ color:  rgb(109, 125, 109, 0.9);
+}
+
+.fa-twitter{
+    color:rgb(109, 125, 109, 0.9);
+}
+
+.fa-reddit{
+    color: rgb(109, 125, 109, 0.9);
+}
+
+.fa-instagram{
+    color: rgb(109, 125, 109, 0.9);
+}
+
+
+.copyright{
+    padding-top: 20px;
+    color:rgb(109, 125, 109, 0.9);
+}

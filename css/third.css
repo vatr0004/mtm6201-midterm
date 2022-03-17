@@ -1,0 +1,308 @@
+
+/* http://meyerweb.com/eric/tools/css/reset/
+        v2.0 | 20110126
+        License: none (public domain)
+        */
+ 
+        html, body, div, span, applet, object, iframe,
+        h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+        a, abbr, acronym, address, big, cite, code,
+        del, dfn, em, img, ins, kbd, q, s, samp,
+        small, strike, strong, sub, sup, tt, var,
+        b, u, i, center,
+        dl, dt, dd, ol, ul, li,
+        fieldset, form, label, legend,
+        table, caption, tbody, tfoot, thead, tr, th, td,
+        article, aside, canvas, details, embed,
+        figure, figcaption, footer, header, hgroup,
+        menu, nav, output, ruby, section, summary,
+        time, mark, audio, video {
+            margin: 0;
+            padding: 0;
+            border: 0;
+            font-size: 100%;
+            font: inherit;
+            vertical-align: baseline;
+        }
+        /* HTML5 display-role reset for older browsers */
+        article, aside, details, figcaption, figure,
+        footer, header, hgroup, menu, nav, section {
+            display: block;
+        }
+        body {
+            line-height: 1;
+        }
+        ol, ul {
+            list-style: none;
+        }
+        blockquote, q {
+            quotes: none;
+        }
+        blockquote:before, blockquote:after,
+        q:before, q:after {
+            content: '';
+            content: none;
+        }
+        table {
+            border-collapse: collapse;
+            border-spacing: 0;
+        }
+/*=======================================================================================*/
+/*============================== MY STYLES =============================================*/
+/*=====================================================================================*/
+
+/* CSS FOR ABOUT PAGE*/
+
+/* Same header as homepage, changing the image and title*/
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing:border-box;
+}
+
+body{
+    background: #A8BCA8;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+.theheader{
+    min-height: 100vh;
+    width:100%;
+    background-image:linear-gradient(rgba(0, 0, 0, 0.5),rgba(0, 0, 0, 0.5)),url(../images/aboutus.jpg);
+    background-position: center;
+    background-repeat:no-repeat;
+    background-size: 100% 100%;
+    position: relative;
+}
+.intro{
+    text-align: center;
+    padding-right: 80px;
+    padding-left: 80px;
+    font-size: 100px;
+    font-weight: bold;
+    color: rgb(206, 195, 195);
+}
+/*Making the options at the top*/
+
+nav{
+    display: flex;
+    padding-bottom: 190px;
+    justify-content: space-between;
+    flex: 1;
+    padding-left: 1000px;
+}
+
+a{
+    text-decoration: none;
+    color: rgb(206, 195, 195);
+}
+
+nav ul li{
+    list-style: none;
+    display: inline-block;
+    font-size: 20px;
+    font-weight: bold;
+    padding: 12px;
+    position: relative;
+}
+
+nav ul li::after{
+    content:'';
+    height: 2px;
+    width: 0%;
+    background: #6D7D6D;
+    display: block;
+    margin: auto;
+    transition: 0.3s;
+}
+
+nav ul li:hover::after{
+    width: 100%;
+}
+
+/* Mobile Version for about page*/
+@media(max-width:700px){
+
+    .intro{
+        font-size: 70px;
+        padding-left: 40px;
+        padding-bottom: 30px;
+    }
+    
+    nav{
+        display: flex;
+        text-decoration: none;
+        padding-top: 10px;
+        padding-bottom: 80px;
+        justify-content: space-between;
+        padding-left: 200px;
+    }
+
+    nav ul li{
+        list-style: none;
+        display: inline-block;
+        color: rgb(206, 195, 195);
+        font-size: 15px;
+        font-weight: bold;
+        padding: 5px;
+        position: relative;
+    }
+
+    .theheader{
+        min-height: 70vh;
+        width:100%;
+        background-size: 100% 100%;
+    }
+
+}
+
+/* Tablet Version*/
+
+@media (max-width: 950px) {
+
+    nav{
+        display: flex;
+        text-decoration: none;
+        padding-top: 10px;
+        padding-bottom: 80px;
+        justify-content: space-between;
+        padding-left: 460px;
+    }
+
+    nav ul li{
+        list-style: none;
+        display: inline-block;
+        color: rgb(206, 195, 195);
+        font-size: 20px;
+        font-weight: bold;
+        padding: 5px;
+        position: relative;
+    }
+
+}
+
+/* End of Header*/ 
+
+/* Designing Side Image*/
+
+.aboutsec{
+    width: 100%;
+    min-height: 100vh;
+    padding-bottom: 3%;
+    overflow: hidden;
+    background-color: rgb(109, 125, 109, 0.9);
+}
+
+.row{
+    width:100%;
+    padding-left: 2%;
+    padding-top: 3%;
+}
+
+.image{
+    width: 40%;
+    float: left;
+}
+
+.image img{
+    width: 100%;
+    height: auto;
+}
+
+.content{
+    width: 50%;
+    float: left;
+    margin-left: 2%;
+}
+
+.title{
+    text-align: center;
+    padding-top: 30%;
+    padding-bottom: 7%;
+    font-size: 60px;
+    font-weight: bold;
+    color: #ECE7E7;
+    position: relative;
+}
+
+.body{
+    text-align: center;
+    padding-left: 5%;
+    font-size: 20px;
+    font-weight: bold;
+    color: #ECE7E7;
+    position: relative;
+}
+
+/*Media Query for Mobile Version*/
+
+@media(max-width:700px){
+
+    .title{
+        font-size: 30px;
+       
+    }
+
+    .body{
+        text-align: left;
+        font-size: 20px;
+        padding-bottom: 5%;
+    }
+
+    .image{
+        width: 95%;
+        padding: 3%;
+        float: left;
+    }
+
+    .content{
+        width: 90%;
+    }
+    .title{
+        padding-top: 2%;
+        font-size: 40px;
+    }
+}
+
+
+/*Making the footer for about page*/
+
+.footer{
+    padding-top: 150px;
+    text-align: center;
+    padding-bottom: 20px;
+}
+
+/* Adding the social Medias*/
+
+.fa {
+    padding: 5px;
+    font-size: 50px;
+    width: 40px;
+    text-align: center;
+    text-decoration: none;
+    margin: 5px 2px;
+}
+
+.fa-facebook{
+ color:  rgb(109, 125, 109, 0.9);
+}
+
+.fa-twitter{
+    color:rgb(109, 125, 109, 0.9);
+}
+
+.fa-reddit{
+    color: rgb(109, 125, 109, 0.9);
+}
+
+.fa-instagram{
+    color: rgb(109, 125, 109, 0.9);
+}
+
+
+.copyright{
+    padding-top: 20px;
+    color:rgb(109, 125, 109, 0.9);
+}
